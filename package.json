@@ -6,7 +6,7 @@
     "stop": "pm2 stop all",
     "delete": "pm2 delete all",
     "dev": "nodemon -r tsconfig-paths/register ./src/main/app.ts | pino-pretty -c",
-    "build": "tsc --project tsconfig.json && tsc-alias -p tsconfig.json && ts-node ./tools/copy-assets.ts",
+    "build": "npx tsc --project tsconfig.json && tsc-alias -p tsconfig.json",
     "test": "jest",
     "test:watch": "yarn test --watchAll --detectOpenHandles --coverage=false",
     "test:ci": "yarn test --coverage --detectOpenHandles"
